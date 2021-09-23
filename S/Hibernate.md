@@ -70,4 +70,13 @@ https://proselyte.net/tutorials/hibernate-tutorial/caching/
 
 HQL:
 https://proselyte.net/tutorials/hibernate-tutorial/hibernate-query-language/
+
 http://java-online.ru/hibernate-hql.xhtml
+
+CRUD Hibernate example:
+
+https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-jpa-dao-example/
+
+https://www.javaguides.net/2018/11/hibernate-query-language-insert-update.html
+
+https://kkjavatutorials.com/hibernate-crud-example/
