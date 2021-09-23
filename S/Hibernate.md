@@ -67,3 +67,7 @@ https://proselyte.net/tutorials/hibernate-tutorial/caching/
     3. Many to one
     
     4. Many to many
+
+HQL:
+https://proselyte.net/tutorials/hibernate-tutorial/hibernate-query-language/
+http://java-online.ru/hibernate-hql.xhtml
