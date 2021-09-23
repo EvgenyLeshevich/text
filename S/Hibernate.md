@@ -80,3 +80,7 @@ https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-jpa-dao-e
 https://www.javaguides.net/2018/11/hibernate-query-language-insert-update.html
 
 https://kkjavatutorials.com/hibernate-crud-example/
+
+H2:
+
+https://www.javaguides.net/2019/11/hibernate-h2-database-example-tutorial.html
