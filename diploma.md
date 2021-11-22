@@ -25,12 +25,16 @@ POST-запрос
         model.addAttribute("user", new User());
         return "test";
     }
+    
+![image](https://user-images.githubusercontent.com/73518823/142919207-c09db505-0e47-4dbd-b7c6-a301d5fa88ee.png)
 
 У нас есть форма:
 
 <form:form modelAttribute="user" method="post" action="/url метода на который мы хотим передать данные">
     <form:input path="название того поля юзера что хотим передать например name" type="text">
 </form:form>
+
+![image](https://user-images.githubusercontent.com/73518823/142918683-3ec21129-fbc5-471a-99cc-4859c00f463f.png)
 
 И примем отправленные параметры с помощбю аннотации @RequestParam на контроллере (С помощью этой аннотации можем принимать если параметров не много):
 
@@ -41,7 +45,11 @@ POST-запрос
         return "successPage";
     }
     
-НО есть способ проще с помощью аннотации @ModelAttribute
+![image](https://user-images.githubusercontent.com/73518823/142919101-e01bf9c6-4e4d-4dce-ac64-6f99f95a940e.png)
+    
+НО есть другой способ с помощью аннотации @ModelAttribute
+
+![image](https://user-images.githubusercontent.com/73518823/142919572-5da0b70e-d0a8-456e-884b-eaf56d6c1688.png)
 
 Её можно ставить над методом - тогда этот примениться для всех существующих в контроллере методов у которых есть Model model, и в эту моель поместиться ещё model.addAttribute("message", "welcome to our website!");
 
@@ -49,3 +57,11 @@ POST-запрос
     public String sendMessage(){
         return "welcome to our website!";
     }
+    
+![image](https://user-images.githubusercontent.com/73518823/142919656-9423d735-10e8-4755-ae86-103d5b68ce81.png)
+ 
+ Когда мы вешаем аннтацию @ModelAttribute в аргументы метода на объект то это означает что мы из формы получаем поля этого объекта, спринг сам создаёт этот объект и присваивает их ему и значения которые мы передали
+ 
+ ![image](https://user-images.githubusercontent.com/73518823/142920489-b7067e6e-f3fa-4ee5-9385-84ef2a772f26.png)
+
+
