@@ -17,3 +17,35 @@ POST-запрос
 Для отправки данных с форм на сервер!
 
 Данные передаются не в url, а в адресной строке
+
+Пример отправки формы на контроллер нужно для начала передать в методе гет объект для которого форма создана:
+
+@GetMapping("/test")
+    public String test(Model model) {
+        model.addAttribute("user", new User());
+        return "test";
+    }
+
+У нас есть форма:
+
+<form:form modelAttribute="user" method="post" action="/url метода на который мы хотим передать данные">
+    <form:input path="название того поля юзера что хотим передать например name" type="text">
+</form:form>
+
+И примем отправленные параметры с помощбю аннотации @RequestParam на контроллере (С помощью этой аннотации можем принимать если параметров не много):
+
+@PostMapping("/test")
+    public String test(@RequestParam("name") String name){
+        User user = new User();
+        user.setName(name);
+        return "successPage";
+    }
+    
+НО есть способ проще с помощью аннотации @ModelAttribute
+
+Её можно ставить над методом - тогда этот примениться для всех существующих в контроллере методов у которых есть Model model, и в эту моель поместиться ещё model.addAttribute("message", "welcome to our website!");
+
+@ModelAttribute("message")
+    public String sendMessage(){
+        return "welcome to our website!";
+    }
